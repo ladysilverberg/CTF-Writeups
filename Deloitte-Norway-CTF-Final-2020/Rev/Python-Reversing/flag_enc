@@ -1,0 +1,124 @@
+  2           0 LOAD_CONST               1 (-1)
+              3 LOAD_CONST               0 (None)
+              6 IMPORT_NAME              0 (marshal)
+              9 STORE_FAST               0 (marshal)
+
+  3          12 LOAD_FAST                0 (marshal)
+             15 LOAD_ATTR                1 (loads)
+             18 LOAD_CONST               2 ('c\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00C\x00\x00\x00s\x08\x00\x00\x00|\x00\x00|\x01\x00AS(\x01\x00\x00\x00N(\x00\x00\x00\x00(\x02\x00\x00\x00t\x01\x00\x00\x00at\x01\x00\x00\x00b(\x00\x00\x00\x00(\x00\x00\x00\x00s\x07\x00\x00\x00<stdin>t\x08\x00\x00\x00<lambda>\x01\x00\x00\x00s\x00\x00\x00\x00')
+             21 CALL_FUNCTION            1
+             24 STORE_FAST               1 (l1)
+
+  4          27 LOAD_FAST                0 (marshal)
+             30 LOAD_ATTR                1 (loads)
+             33 LOAD_CONST               3 ('c\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00C\x00\x00\x00s\x08\x00\x00\x00|\x00\x00|\x01\x00\x17S(\x01\x00\x00\x00N(\x00\x00\x00\x00(\x02\x00\x00\x00t\x01\x00\x00\x00at\x01\x00\x00\x00b(\x00\x00\x00\x00(\x00\x00\x00\x00s\x07\x00\x00\x00<stdin>t\x08\x00\x00\x00<lambda>\x01\x00\x00\x00s\x00\x00\x00\x00')
+             36 CALL_FUNCTION            1
+             39 STORE_FAST               2 (l2)
+
+  5          42 LOAD_FAST                0 (marshal)
+             45 LOAD_ATTR                1 (loads)
+             48 LOAD_CONST               4 ('c\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00C\x00\x00\x00s\x04\x00\x00\x00d\x01\x00S(\x02\x00\x00\x00Nt%\x00\x00\x00Aa0Aa1Aa2Aa3Aa4Aa5Aa6Aa7Aa8Aa9Ab0Ab1A(\x00\x00\x00\x00(\x00\x00\x00\x00(\x00\x00\x00\x00(\x00\x00\x00\x00s\x07\x00\x00\x00<stdin>t\x08\x00\x00\x00<lambda>\x01\x00\x00\x00s\x00\x00\x00\x00')
+             51 CALL_FUNCTION            1
+             54 STORE_FAST               3 (l3)
+
+  6          57 LOAD_FAST                0 (marshal)
+             60 LOAD_ATTR                1 (loads)
+             63 LOAD_CONST               5 ('c\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00C\x00\x00\x00s\x07\x00\x00\x00t\x00\x00\x83\x00\x00S(\x01\x00\x00\x00N(\x01\x00\x00\x00t\t\x00\x00\x00raw_input(\x00\x00\x00\x00(\x00\x00\x00\x00(\x00\x00\x00\x00s\x07\x00\x00\x00<stdin>t\x08\x00\x00\x00<lambda>\x01\x00\x00\x00s\x00\x00\x00\x00')
+             66 CALL_FUNCTION            1$$
+             69 STORE_FAST               4 (l4)
+
+  7          72 LOAD_CONST               6 (<code object <lambda> at 0x7f42c16fc8b0, file "chall.py", line 7>)
+             75 MAKE_FUNCTION            0
+             78 STORE_FAST               5 (dummy)
+
+  8          81 LOAD_FAST                4 (l4)
+             84 LOAD_FAST                5 (dummy)
+             87 STORE_ATTR               2 (func_code)
+
+  9          90 LOAD_FAST                5 (dummy)
+             93 CALL_FUNCTION            0
+             96 STORE_FAST               6 (flag)
+
+ 10          99 LOAD_CONST               7 ('')
+            102 STORE_FAST               7 (out)
+
+ 11         105 SETUP_LOOP             162 (to 270)
+            108 LOAD_GLOBAL              3 (range)
+            111 LOAD_GLOBAL              4 (len)
+            114 LOAD_FAST                6 (flag)
+            117 CALL_FUNCTION            1
+            120 CALL_FUNCTION            1
+            123 GET_ITER            
+        >>  124 FOR_ITER               142 (to 269)
+            127 STORE_FAST               8 (i)
+
+ 12         130 LOAD_GLOBAL              5 (ord)
+            133 LOAD_FAST                6 (flag)
+            136 LOAD_FAST                8 (i)
+            139 BINARY_SUBSCR       
+            140 CALL_FUNCTION            1
+            143 STORE_FAST               9 (o1)
+
+ 13         146 LOAD_FAST                3 (l3)
+            149 LOAD_FAST                5 (dummy)
+            152 STORE_ATTR               2 (func_code)
+
+ 14         155 LOAD_GLOBAL              5 (ord)
+            158 LOAD_FAST                5 (dummy)
+            161 CALL_FUNCTION            0
+            164 LOAD_FAST                8 (i)
+            167 BINARY_SUBSCR       
+            168 CALL_FUNCTION            1
+            171 STORE_FAST              10 (o2)
+
+ 15         174 LOAD_FAST                1 (l1)
+            177 LOAD_FAST                5 (dummy)
+            180 STORE_ATTR               2 (func_code)
+
+ 16         183 LOAD_FAST                5 (dummy)
+            186 LOAD_FAST                9 (o1)
+            189 LOAD_FAST               10 (o2)
+            192 CALL_FUNCTION            2
+            195 STORE_FAST              11 (o3)
+
+ 17         198 LOAD_FAST                2 (l2)
+            201 LOAD_FAST                5 (dummy)
+            204 STORE_ATTR               2 (func_code)
+
+ 18         207 LOAD_FAST                5 (dummy)
+            210 LOAD_FAST               11 (o3)
+            213 LOAD_CONST               8 (20)
+            216 CALL_FUNCTION            2
+            219 STORE_FAST              12 (o4)
+
+ 19         222 LOAD_FAST                1 (l1)
+            225 LOAD_FAST                5 (dummy)
+            228 STORE_ATTR               2 (func_code)
+
+ 20         231 LOAD_FAST                5 (dummy)
+            234 LOAD_FAST               12 (o4)
+            237 LOAD_CONST               9 (90)
+            240 CALL_FUNCTION            2
+            243 STORE_FAST              13 (o5)
+
+ 21         246 LOAD_FAST                7 (out)
+            249 LOAD_GLOBAL              6 (chr)
+            252 LOAD_FAST               13 (o5)
+            255 LOAD_CONST              10 (1)
+            258 BINARY_XOR          
+            259 CALL_FUNCTION            1
+            262 INPLACE_ADD         
+            263 STORE_FAST               7 (out)
+            266 JUMP_ABSOLUTE          124
+        >>  269 POP_BLOCK           
+
+ 22     >>  270 LOAD_GLOBAL              7 (open)
+            273 LOAD_CONST              11 ('flag_enc')
+            276 LOAD_CONST              12 ('w')
+            279 CALL_FUNCTION            2
+            282 LOAD_ATTR                8 (write)
+            285 LOAD_FAST                7 (out)
+            288 CALL_FUNCTION            1
+            291 POP_TOP             
+            292 LOAD_CONST               0 (None)
+            295 RETURN_VALUE        
