@@ -1,0 +1,2 @@
+# 3D-Queens
+A recursive solver for placing N queens on a board with K queens already placed, such that no queen can capture each other. This one also has the twist that there can be X layers of boards where queens are transferred between layers.
